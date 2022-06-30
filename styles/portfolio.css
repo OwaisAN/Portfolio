@@ -13,6 +13,11 @@ body {
     border-color: gray;
     width: 10%;
 } */
+section {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
 
 h1 {
     margin-top: .3em;
@@ -25,8 +30,10 @@ h1 {
     transition: 1s;
 }
 h1:hover {
-    transition-duration: 1s;
-    text-shadow: 4px 4px #515a64;
+    transition-duration: 0.3s;
+    /* text-shadow: 4px 4px #515a64; */
+    text-shadow: 4px 4px #ffffff;
+
 }
 
 h2 {
@@ -42,19 +49,34 @@ h3 {
     font-size: 130%;
 }
 
+form {
+    margin: auto;
+}
+
+footer {
+    background-color: #212529;
+}
+
 #first-section > p {
     font-size: 130%;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
     /* margin-bottom: 1em; */
     padding: 1em;
-    width: 40%;
-    
+    /* width: 40%; */
+}
+
+@media screen and (min-width: 950px) {
+    #first-section > p {
+        width: 40%;
+    }
 
 }
 
+
 table {
-    margin-top: 100px;
+    margin: auto;
+    text-align: left;
 }
 
 /* CLASS CSS */
@@ -66,40 +88,168 @@ table {
 
 }
 
+
 .card {
-    margin: 1em;
-    border-radius: 1em;
+    margin: 5px;
+    border-radius: 10px;
     background-color: #212529;
     transition: 1s;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    /* height: 400px; */
-
+    /* width: 300px; */
+    
 }
 .card:hover{
     opacity: 1.0;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     /* box-shadow: 10px 10px #f9cd85c9; */
     background-color: #d2aca1;
     transform: translateY(-20px);
 }
-
-.card > img {
-    border-radius: 1em;
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
+
+
+.footnote {
+    background-color: #212529;
+    font-family: 'Montserrat', sans-serif;
+    padding: 25px 60px 40px 25px;
+    color:#ffffff;
+}
+
+.highlight {
+    color:#d2aca1;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.icon {
+    height: 55px;
+    width: 55px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.icon:hover {
+    transition-duration: 0.3s;
+    /* background-color: #b07767; */
+    transform: scale(1.3);
+}
+
+.icon-wrap {
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-pic {
+    max-width: 60%;
+    max-height: 60%;
+    margin: auto;
+}
+
+.info-block {
+    margin: auto;
+    width: 400px;
+    height: 150px;
+    background-color: #212529;
+    color: white;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    transition: 1s;
+}
+.info-block:hover {
+    transition-duration: 1s;
+	box-shadow: 15px 15px rgba(0, 0, 0, 1);
+}
+
+/* .navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.nav-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;bottom: 0%;
+    width: 100%;height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.skills-circle {
+    background-color: #212529;
+    border-radius: 50%;
+    color: white;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    padding: 1em;
+    margin: auto;
+}
+
+.skills-circle-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.skillist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75rem;
+    margin: auto;
+}
+.skillist div {
+    background-color: #3a4147;
+    margin: 1rem;
+    padding: 1em;
+    border-radius: 70px;
+    color: whitesmoke;
+}
+
 
 /* ID CSS */
 #first-section {
     background-color: #efa18b;
     /* margin-top: 0; */
     padding-top: 9%;
-    padding-bottom: 3%;
     text-align: center;
 }
 
 #second-section {
     background-color: #b07767;
-    padding-top: 3%;
-    padding-bottom: 3%;
+
+}
+#second-section .col-lg-4 {
+    margin: auto;
+}
+
+#fourth-section {
+    background-color: #3a4147;
+    color: whitesmoke;
 }
 
 #profile-pic {
@@ -113,5 +263,43 @@ table {
     width: 25%;
 
 }
+
+#skills-list {
+    margin: auto;
+    text-align: left;
+    width: 65%;
+}
+
+#skills-list ul>li {
+    margin: 1em;
+    padding: 5px;
+    list-style: none;
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+/* #skills-circle .row {
+    
+} */
+
+@media screen and (min-width: 520px) {
+    #contact {
+        width: 520px;
+    }
+}
+
+#contact .form-control {
+    border: 0;
+    color: white;
+    background-color: #000000;
+}
+
+.social-media-links > div {
+    display: inline-flex;
+    margin-top: 1em;
+}
+
+
 
 
