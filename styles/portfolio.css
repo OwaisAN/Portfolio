@@ -233,7 +233,8 @@ table {
 
 /* ID CSS */
 #first-section {
-    background-color: #efa18b;
+    /* background-color: #efa18b; */
+    background-color: #ce988a;
     /* margin-top: 0; */
     padding-top: 9%;
     text-align: center;
